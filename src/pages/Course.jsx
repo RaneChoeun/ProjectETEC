@@ -13,6 +13,7 @@ import {
   ChevronLeft,
   Video,
 } from "lucide-react";
+import seedData from "../seed/seedData.js"
 
 const Course = () => {
   const [courses, setCourses] = useState([]);
@@ -30,14 +31,9 @@ const Course = () => {
       try {
         setLoading(true);
 
-        // Fetch courses from JSONPlaceholder API
-        const coursesResponse = await fetch(
-          "https://jsonplaceholder.typicode.com/posts?_limit=50"
-        );
-        const coursesData = await coursesResponse.json();
 
         // Enhanced courses data with detailed information
-        const enhancedCourses = coursesData.map((course, index) => {
+        const enhancedCourses = seedData.map((course, index) => {
           const courseCategories = [
             "web development",
             "mobile development",
@@ -106,6 +102,7 @@ const Course = () => {
             ? originalPrice * (1 - discountRate / 100)
             : originalPrice;
 
+
           return {
             id: course.id,
             title: `Course ${course.id}: ${course.title
@@ -118,6 +115,7 @@ const Course = () => {
             price: `$${finalPrice.toFixed(2)}`,
             originalPrice: hasDiscount ? `$${originalPrice.toFixed(2)}` : null,
             discount: discountRate,
+            img: course.image,
             duration: `${4 + (index % 6)} weeks`,
             rating: (4 + Math.random() * 0.9).toFixed(1),
             students: Math.floor(Math.random() * 5000) + 1000,
@@ -164,6 +162,7 @@ const Course = () => {
           badge: "Featured",
           badgeColor: "bg-yellow-500",
         }));
+
 
         // Create live classes data
         const liveClassesData = [
@@ -292,6 +291,7 @@ const Course = () => {
             price: "$59.99",
             color: "from-orange-500 to-red-600",
             status: "live",
+
             description:
               "Build cross-platform mobile apps with React Native in this intensive session.",
             category: "mobile development",
@@ -397,9 +397,11 @@ const Course = () => {
         {/* Course Image */}
         <div className="relative">
           <div
-            className={`h-32 bg-gradient-to-br ${course.color} rounded-t-xl flex items-center justify-center relative`}
+            className={`h-32 rounded-t-xl flex items-center overflow-hidden justify-center relative bg-gradient-to-br ${course.color}
+            }`}
           >
-            <BookOpen className="w-8 h-8 text-white" />
+            <img src={course.img} className="h-full w-full"/>
+            {/* <BookOpen className="w-8 h-8 text-white absolute" /> */}
             {course.featured && (
               <div className="absolute top-2 left-2 bg-yellow-500 text-white px-2 py-1 rounded text-xs font-bold">
                 <Zap className="w-3 h-3 inline mr-1" />
@@ -413,6 +415,7 @@ const Course = () => {
             )}
           </div>
         </div>
+
 
         {/* Course Content */}
         <div className="p-4">
@@ -428,7 +431,6 @@ const Course = () => {
           <h3 className="text-sm font-semibold text-gray-800 mb-2 group-hover:text-purple-700 transition-colors line-clamp-2 leading-tight">
             {course.title}
           </h3>
-
           <div className="flex items-center text-xs text-gray-500 mb-3 space-x-3">
             <span className="flex items-center">
               <Clock className="w-3 h-3 mr-1" />
@@ -517,6 +519,7 @@ const Course = () => {
             </span>
           </div>
 
+
           <div className="flex items-center justify-between mb-3">
             <span
               className={`text-xs font-medium px-2 py-1 rounded ${
@@ -530,7 +533,7 @@ const Course = () => {
               {classItem.time}
             </span>
             <span className="text-xs text-gray-500">
-              ⏱ {classItem.duration}
+              ⏱️ {classItem.duration}
             </span>
           </div>
 
@@ -616,6 +619,7 @@ const Course = () => {
             </button>
           </div>
         </div>
+
 
         {/* Search and Filters - Only for courses */}
         {activeTab === "courses" && (
@@ -706,6 +710,7 @@ const Course = () => {
             </div>
           </div>
         )}
+
 
         {/* Content */}
         {activeTab === "courses" ? (
