@@ -110,7 +110,7 @@ const HomePage = ({
           </span>
         </div>
         <p className="text-gray-600 text-xs mb-4 line-clamp-2 leading-relaxed">
-          {course.body.substring(0, 80)}...
+          {course.description.substring(0, 80)}...
         </p>
         <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
           <div className="flex items-center space-x-4">
@@ -157,7 +157,7 @@ const HomePage = ({
           </span>
         </div>
         <p className="text-gray-600 text-xs mb-4 line-clamp-2 leading-relaxed">
-          {classItem.body.substring(0, 80)}...
+          {classItem.description.substring(0, 80)}...
         </p>
         <div className="space-y-2 mb-4">
           <div className="flex items-center justify-between text-xs text-gray-500">
