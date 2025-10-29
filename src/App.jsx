@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useContext } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -16,6 +17,8 @@ import TermsConditions from "./pages/TermsConditions";
 import Features from "./pages/Feactures";
 import Settings from "./pages/Settings";
 import AllCourseDetail from "./pages/AllCourseDetail";
+import { LanguageContext } from "./components/LanguageContext";
+import { translations } from "./components/Translatation";
 
 // Component to handle footer visibility
 const FooterHandler = ({ onAboutUs, onTermsConditions, onSettings }) => {
@@ -41,6 +44,8 @@ function App() {
   const [showProfile, setShowProfile] = useState(false);
   const [currentView, setCurrentView] = useState("home");
   const [userData, setUserData] = useState(null);
+  const {languag} = useContext(LanguageContext);
+  const t = translations[languag];
 
   const handleLoginSuccess = (userData) => {
     setUserData(userData);

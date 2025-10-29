@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import HomePage from "./HomePage";
 import CourseDetail from "./CourseDetail";
 import ClassDetail from "./ClassDetail";
+// import seedData from "..seed/seedData";
+// import seedDataLive from "../seed/seedDataLive";
 
 function Home({ userData }) {
   const [open, setOpen] = useState(false);

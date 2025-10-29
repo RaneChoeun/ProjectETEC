@@ -4,8 +4,6 @@ import {
   Star,
   Clock,
   Users,
-  ChevronLeft,
-  ChevronRight,
   BookOpen,
   Users as UsersIcon,
   Award,
@@ -26,9 +24,9 @@ const HomePage = ({
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const heroImages = [
-    "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
-    "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    "https://seobutler.com/wp-content/uploads/2025/09/Best-laptop-for-data-scientist-and-analytics%E2%80%8B-seobutler.com_-1024x576.jpg",
+    "https://springfieldmuseums.org/wp-content/uploads/2020/07/coding-adults-980x654.jpg",
+    "https://careertraining.ed2go.com/common/images/2/25126/GES3128-Data-Analytics-Certificate-935x572.jpg"
   ];
 
   // Auto-rotate images
@@ -41,17 +39,17 @@ const HomePage = ({
     return () => clearInterval(interval);
   }, [heroImages.length]);
 
-  const nextImage = () => {
-    setCurrentImageIndex((current) =>
-      current === heroImages.length - 1 ? 0 : current + 1
-    );
-  };
+  // const nextImage = () => {
+  //   setCurrentImageIndex((current) =>
+  //     current === heroImages.length - 1 ? 0 : current + 1
+  //   );
+  // };
 
-  const prevImage = () => {
-    setCurrentImageIndex((current) =>
-      current === 0 ? heroImages.length - 1 : current - 1
-    );
-  };
+  // const prevImage = () => {
+  //   setCurrentImageIndex((current) =>
+  //     current === 0 ? heroImages.length - 1 : current - 1
+  //   );
+  // };
 
   const goToImage = (index) => {
     setCurrentImageIndex(index);
@@ -211,7 +209,7 @@ const HomePage = ({
         </div>
 
         {/* Navigation Controls */}
-        <button
+        {/* <button
           onClick={prevImage}
           className="absolute left-4 z-20 p-3 rounded-full bg-white/90 hover:bg-white text-gray-700 shadow-xl transition-all hover:scale-110 hidden sm:block"
         >
@@ -223,7 +221,7 @@ const HomePage = ({
           className="absolute right-4 z-20 p-3 rounded-full bg-white/90 hover:bg-white text-gray-700 shadow-xl transition-all hover:scale-110 hidden sm:block"
         >
           <ChevronRight className="w-5 h-5" />
-        </button>
+        </button> */}
 
         {/* Dot Indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">

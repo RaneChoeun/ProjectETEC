@@ -1,4 +1,5 @@
 import fluter from "./image/fluter.jpg"
+import js from "./image/js.png"
 const courseSeedData = [
   // === Web Development (1–10) ===
   {
@@ -25,7 +26,7 @@ const courseSeedData = [
     students: 1500,
     level: "Beginner",
     featured: false,
-    image: "/images/javascript.jpg",
+    image: "/images/js.png",
   },
   {
     id: 3,
