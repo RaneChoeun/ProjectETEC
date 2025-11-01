@@ -44,7 +44,7 @@ function App() {
   const [showProfile, setShowProfile] = useState(false);
   const [currentView, setCurrentView] = useState("home");
   const [userData, setUserData] = useState(null);
-  const {languag} = useContext(LanguageContext);
+  const { languag } = useContext(LanguageContext);
   const t = translations[languag];
 
   const handleLoginSuccess = (userData) => {
@@ -126,7 +126,7 @@ function App() {
   return (
     <Router>
       <div className="App flex flex-col min-h-screen">
-        {/* Your original Nav component - unchanged */}
+        {/* Navigation */}
         <Nav
           userData={userData}
           onLogout={handleLogout}
@@ -140,15 +140,26 @@ function App() {
           setOpen={setOpen}
         />
 
-        <main className="flex-grow">
+        <main className="grow">
           <Routes>
             <Route path="/" element={renderCurrentView()} />
             <Route path="/course" element={<Course />} />
-            <Route path="/course-detail" element={<AllCourseDetail />} />
-
-            <Route path="/about" element={<AboutUs onBack={handleBackToHome} />}/>
             <Route
-               path="/terms"
+              path="/course-detail"
+              element={
+                <AllCourseDetail
+                  userData={userData}
+                  onShowAuth={handleShowAuth}
+                  onShowProfile={() => setShowProfile(true)} // Make sure this is added
+                />
+              }
+            />
+            <Route
+              path="/about"
+              element={<AboutUs onBack={handleBackToHome} />}
+            />
+            <Route
+              path="/terms"
               element={<TermsConditions onBack={handleBackToHome} />}
             />
             <Route
@@ -177,12 +188,8 @@ function App() {
             onUpdateProfile={handleUpdateProfile}
           />
         )}
-        {/* Enhanced Footer with navigation */}
-        {/* <FooterHandler
-          onAboutUs={handleAboutUs}
-          onTermsConditions={handleTermsConditions}
-          onSettings={handleSettings}
-        /> */}
+
+        {/* Footer */}
         <Footer />
       </div>
     </Router>

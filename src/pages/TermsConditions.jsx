@@ -3,23 +3,23 @@ import { ArrowLeft } from "lucide-react";
 
 const TermsConditions = ({ onBack }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-100 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 py-8 px-4">
       <div className="max-w-4xl mx-auto">
         <button
           onClick={onBack}
-          className="flex items-center text-purple-700 hover:text-purple-900 mb-6 transition-all"
+          className="flex items-center text-[#004F70] hover:text-[#003d56] mb-6 transition-all"
         >
           <ArrowLeft className="w-5 h-5 mr-2" /> Back to Home
         </button>
 
         <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-purple-800 mb-6">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#004F70] mb-6">
             Terms & Conditions
           </h1>
 
           <div className="space-y-6">
             <section>
-              <h2 className="text-2xl font-bold text-purple-700 mb-3">
+              <h2 className="text-2xl font-bold text-[#004F70] mb-3">
                 1. Enrollment Policy
               </h2>
               <p className="text-gray-600 leading-relaxed">
@@ -31,7 +31,7 @@ const TermsConditions = ({ onBack }) => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-purple-700 mb-3">
+              <h2 className="text-2xl font-bold text-[#004F70] mb-3">
                 2. User Responsibilities
               </h2>
               <p className="text-gray-600 leading-relaxed">
@@ -43,7 +43,7 @@ const TermsConditions = ({ onBack }) => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-purple-700 mb-3">
+              <h2 className="text-2xl font-bold text-[#004F70] mb-3">
                 3. Intellectual Property
               </h2>
               <p className="text-gray-600 leading-relaxed">
@@ -55,7 +55,7 @@ const TermsConditions = ({ onBack }) => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-purple-700 mb-3">
+              <h2 className="text-2xl font-bold text-[#004F70] mb-3">
                 4. Privacy Policy
               </h2>
               <p className="text-gray-600 leading-relaxed">

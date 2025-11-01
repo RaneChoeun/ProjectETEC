@@ -1,14 +1,14 @@
 import React from "react";
-import { ExternalLink } from "lucide-react";
-import { FaFacebookF, FaTiktok, FaTelegramPlane, FaEnvelope } from "react-icons/fa";
+import { Facebook, MessageCircle, Mail, ExternalLink } from "lucide-react";
 import Logo from "./Logo";
-//3 run when user click onAboutUs, onTermCondition, onSetting
+
 const Footer = ({ onAboutUs, onTermsConditions, onSettings }) => {
   const currentYear = new Date().getFullYear();
 
   const handleSocialClick = (platform) => {
+    // You can replace these with your actual social media links
     const socialLinks = {
-      facebook: "https://web.facebook.com/?_rdc=1&_rdr#",
+      facebook: "https://facebook.com/yourpage",
       tiktok: "https://tiktok.com/@yourprofile",
       telegram: "https://t.me/yourchannel",
       email: "mailto:contact@clclearning.com",
@@ -24,20 +24,16 @@ const Footer = ({ onAboutUs, onTermsConditions, onSettings }) => {
   };
 
   return (
-    <footer className="bg-gradient-to-r from-purple-800 to-purple-900 text-white py-12 mt-16">
+    <footer className="bg-[#004F70] text-white py-12 mt-16">
       <div className="container mx-auto px-4">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand Section */}
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
-              {/* <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mr-3">
-                <span className="text-purple-800 font-bold text-lg">CLC</span>
-              </div>
-              <h3 className="text-2xl font-bold">CLC Learning</h3> */}
               <Logo />
             </div>
-            <p className="text-purple-200 mb-4 leading-relaxed">
+            <p className="text-white/90 mb-4 leading-relaxed">
               Empowering learners through quality education. Join thousands of
               students who have transformed their careers with our expert-led
               courses and live classes.
@@ -46,37 +42,37 @@ const Footer = ({ onAboutUs, onTermsConditions, onSettings }) => {
               {/* Facebook */}
               <button
                 onClick={() => handleSocialClick("facebook")}
-                className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all duration-300 hover:scale-110 group"
+                className="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-all duration-300 hover:scale-110 group"
                 aria-label="Visit our Facebook page"
               >
-                <FaFacebookF className="w-5 h-5 text-white group-hover:text-blue-400" />
+                <Facebook className="w-5 h-5 text-white group-hover:text-blue-100" />
               </button>
 
               {/* TikTok */}
               <button
                 onClick={() => handleSocialClick("tiktok")}
-                className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all duration-300 hover:scale-110 group"
+                className="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-all duration-300 hover:scale-110 group"
                 aria-label="Visit our TikTok profile"
               >
-                <FaTiktok className="w-5 h-5 text-white group-hover:text-pink-500" />
+                <MessageCircle className="w-5 h-5 text-white group-hover:text-pink-100" />
               </button>
 
               {/* Telegram */}
               <button
                 onClick={() => handleSocialClick("telegram")}
-                className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all duration-300 hover:scale-110 group"
+                className="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-all duration-300 hover:scale-110 group"
                 aria-label="Join our Telegram channel"
               >
-                <FaTelegramPlane className="w-5 h-5 text-white group-hover:text-blue-500" />
+                <Mail className="w-5 h-5 text-white group-hover:text-blue-100" />
               </button>
 
               {/* Email */}
               <button
                 onClick={() => handleSocialClick("email")}
-                className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all duration-300 hover:scale-110 group"
+                className="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-all duration-300 hover:scale-110 group"
                 aria-label="Send us an email"
               >
-                <FaEnvelope className="w-5 h-5 text-white group-hover:text-red-400" />
+                <Mail className="w-5 h-5 text-white group-hover:text-red-100" />
               </button>
             </div>
           </div>
@@ -90,7 +86,7 @@ const Footer = ({ onAboutUs, onTermsConditions, onSettings }) => {
               <li>
                 <button
                   onClick={() => handleLinkClick(onAboutUs)}
-                  className="text-purple-200 hover:text-white transition-colors duration-300 flex items-center group"
+                  className="text-white/90 hover:text-white transition-colors duration-300 flex items-center group"
                 >
                   <ExternalLink className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                   About Us
@@ -99,7 +95,7 @@ const Footer = ({ onAboutUs, onTermsConditions, onSettings }) => {
               <li>
                 <button
                   onClick={() => handleLinkClick(onTermsConditions)}
-                  className="text-purple-200 hover:text-white transition-colors duration-300 flex items-center group"
+                  className="text-white/90 hover:text-white transition-colors duration-300 flex items-center group"
                 >
                   <ExternalLink className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Terms & Conditions
@@ -108,7 +104,7 @@ const Footer = ({ onAboutUs, onTermsConditions, onSettings }) => {
               <li>
                 <button
                   onClick={() => handleLinkClick(onSettings)}
-                  className="text-purple-200 hover:text-white transition-colors duration-300 flex items-center group"
+                  className="text-white/90 hover:text-white transition-colors duration-300 flex items-center group"
                 >
                   <ExternalLink className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                   Settings
@@ -122,9 +118,9 @@ const Footer = ({ onAboutUs, onTermsConditions, onSettings }) => {
             <h4 className="text-lg font-semibold mb-4 text-white">
               Contact Info
             </h4>
-            <div className="space-y-3 text-purple-200">
+            <div className="space-y-3 text-white/90">
               <p className="flex items-center">
-                <FaEnvelope className="w-4 h-4 mr-2" />
+                <Mail className="w-4 h-4 mr-2" />
                 contact@clclearning.com
               </p>
               <p>📍 Phnom Penh, Cambodia</p>
@@ -134,13 +130,13 @@ const Footer = ({ onAboutUs, onTermsConditions, onSettings }) => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-purple-700 pt-8">
+        <div className="border-t border-white/30 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-purple-300 text-sm mb-4 md:mb-0">
+            <p className="text-white/80 text-sm mb-4 md:mb-0">
               &copy; {currentYear} CLC Learning. All rights reserved.
             </p>
-            <p className="text-purple-200 text-sm flex items-center">
-              <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+            <p className="text-white/90 text-sm flex items-center">
+              <span className="w-2 h-2 bg-green-300 rounded-full mr-2 animate-pulse"></span>
               Empowering learners through quality education
             </p>
           </div>

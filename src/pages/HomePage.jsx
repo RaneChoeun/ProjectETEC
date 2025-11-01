@@ -24,9 +24,9 @@ const HomePage = ({
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const heroImages = [
-    "https://seobutler.com/wp-content/uploads/2025/09/Best-laptop-for-data-scientist-and-analytics%E2%80%8B-seobutler.com_-1024x576.jpg",
-    "https://springfieldmuseums.org/wp-content/uploads/2020/07/coding-adults-980x654.jpg",
-    "https://careertraining.ed2go.com/common/images/2/25126/GES3128-Data-Analytics-Certificate-935x572.jpg"
+    "https://i.pinimg.com/736x/8d/37/99/8d3799e24be55bdfddb7a4fd8e4100d0.jpg",
+    "https://i.pinimg.com/1200x/75/4c/a2/754ca2accdb8e560ea9bbd92afdbef6b.jpg",
+    "https://i.pinimg.com/1200x/32/a8/fb/32a8fb6a7b353fb479524616a28a84d6.jpg",
   ];
 
   // Auto-rotate images
@@ -186,9 +186,9 @@ const HomePage = ({
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50/30 font-sans">
+    <div className="min-h-screen  font-sans">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Carousel */}
         <div className="absolute inset-0">
           {heroImages.map((image, index) => (
@@ -203,7 +203,7 @@ const HomePage = ({
                 alt={`Learning environment ${index + 1}`}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-900/60 via-gray-900/40 to-gray-900/60" />
+              <div className="absolute inset-0 bg-gradient-to-blue from-gray-900/60 via-gray-900/40 to-gray-900/60" />
             </div>
           ))}
         </div>
@@ -243,7 +243,7 @@ const HomePage = ({
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Start Your
-              <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mt-2">
+              <span className="block bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mt-2">
                 Knowledge Journey
               </span>
             </h1>
@@ -260,7 +260,7 @@ const HomePage = ({
                   className="text-center group p-4 rounded-2xl bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
                 >
                   <div
-                    className={`w-12 h-12 bg-gradient-to-r ${feature.gradient} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform`}
+                    className={`w-12 h-12 bg-linear-to-r ${feature.gradient} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform`}
                   >
                     <div className="text-white">{feature.icon}</div>
                   </div>

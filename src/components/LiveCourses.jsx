@@ -12,7 +12,7 @@ const LiveCourses = ({ liveClasses, handleCourseClick, handleRegisterNow }) => {
         >
           <div className="relative">
             <div
-              className={`h-24 bg-gradient-to-br ${classItem.color} rounded-t-xl flex items-center justify-center relative`}
+              className={`h-24 bg-gradient-to-brue ${classItem.color} rounded-t-xl flex items-center justify-center relative`}
             >
               <Video className="w-6 h-6 text-white" />
               {classItem.status === "live" && (
@@ -37,7 +37,9 @@ const LiveCourses = ({ liveClasses, handleCourseClick, handleRegisterNow }) => {
             <div className="flex items-center text-xs text-gray-500 mb-2">
               <span>👤 {classItem.instructor}</span>
               <span className="mx-2">•</span>
-              <span>👥 {classItem.enrolled}/{classItem.maxStudents}</span>
+              <span>
+                👥 {classItem.enrolled}/{classItem.maxStudents}
+              </span>
             </div>
 
             <div className="flex items-center justify-between mb-3">
@@ -52,7 +54,9 @@ const LiveCourses = ({ liveClasses, handleCourseClick, handleRegisterNow }) => {
               >
                 {classItem.time}
               </span>
-              <span className="text-xs font-medium text-gray-500">{classItem.level}</span>
+              <span className="text-xs font-medium text-gray-500">
+                {classItem.level}
+              </span>
             </div>
 
             <button

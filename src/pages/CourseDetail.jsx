@@ -9,7 +9,7 @@ const CourseDetail = ({ item, onBack }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-100 py-8 px-4">
+    <div className="min-h-screen bg-linear-to-br from-purple-50 via-white to-purple-100 py-8 px-4">
       <div className="max-w-4xl mx-auto">
         <button
           onClick={onBack}
@@ -71,7 +71,7 @@ const CourseDetail = ({ item, onBack }) => {
                 key={index}
                 className="flex items-center p-3 bg-purple-50 rounded-lg"
               >
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 shrink-0" />
                 <span className="text-gray-700">{subject}</span>
               </div>
             ))}
@@ -88,7 +88,7 @@ const CourseDetail = ({ item, onBack }) => {
                 key={index}
                 className="flex items-start p-3 bg-green-50 rounded-lg"
               >
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 shrink-0" />
                 <span className="text-gray-700">{benefit}</span>
               </div>
             ))}

@@ -1,19 +1,78 @@
-import fluter from "./image/fluter.jpg"
-import js from "./image/js.png"
+import htmlandcss from "./images/htmlandcss.png";
+import javascript from "./images/javascript.png";
+import react from "./images/react.png";
+import node from "./images/node.png";
+import next from "./images/next.png";
+import tailwind from "./images/tailwind.png";
+import react2 from "./images/react2.png";
+import accessibility from "./images/accessibility.png";
+import testing from "./images/testing.png";
+import fullstack from "./images/fullstack.png";
+import reactnative from "./images/reactnative.png";
+import fluter from "./images/fluter.jpg";
+import kotlin from "./images/kotlin.png";
+import swift from "./images/swift.png";
+import uiux from "./images/uiux.png";
+import firebase from "./images/firebase.png";
+import unity from "./images/unity.png";
+import aso from "./images/aso.png";
+import reactnativeadvanced from "./images/reactnativeadvanced.png";
+import crossplatform from "./images/crossplatform.png";
+import graphicdesign from "./images/graphicdesign.png";
+import figma from "./images/figma.png";
+import uxresearch from "./images/uxresearch.png";
+import designsystem from "./images/designsystem.png";
+import photoshop from "./images/photoshop.png";
+import illustrator from "./images/illustrator.png";
+import designthinking from "./images/designthinking.png";
+import prototyping from "./images/prototyping.png";
+import branding from "./images/branding.png";
+import blender from "./images/blender.png";
+import cprogramming from "./images/cprogramming.png";
+import python from "./images/python.png";
+import java from "./images/java.png";
+import cpp from "./images/cpp.png";
+import rust from "./images/rust.png";
+import golang from "./images/golang.png";
+import dsa from "./images/dsa.png";
+import pseudocode from "./images/pseudocode.png";
+import functionaljs from "./images/functionaljs.png";
+import flask from "./images/flask.png";
+import entrepreneurship from "./images/entrepreneurship.png";
+import digitalmarketing from "./images/digitalmarketing.png";
+import leadership from "./images/leadership.png";
+import accounting from "./images/accounting.png";
+import pmp from "./images/pmp.png";
+import negotiation from "./images/negotiation.png";
+import excel from "./images/excel.png";
+import startupfunding from "./images/startupfunding.png";
+import communication from "./images/communication.png";
+import ecommerce from "./images/ecommerce.png";
+import cyberfundamentals from "./images/cyberfundamentals.png";
+import ethicalhacking from "./images/ethicalhacking.png";
+import networksecurity from "./images/networksecurity.png";
+import cloudsecurity from "./images/cloudsecurity.png";
+import forensics from "./images/forensics.png";
+import soc from "./images/soc.png";
+import crypto from "./images/crypto.png";
+import awareness from "./images/awareness.png";
+import malware from "./images/malware.png";
+import mlintro from "./images/mlintro.png";
 const courseSeedData = [
   // === Web Development (1–10) ===
   {
     id: 1,
     category: "Web Development",
     title: "HTML & CSS Fundamentals",
-    description: "Learn the basics of HTML and CSS to build beautiful static websites.",
+    description:
+      "Learn the basics of HTML and CSS to build beautiful static websites.",
     instructor: "Alice Johnson",
     duration: "4 weeks",
     rating: 4.6,
     students: 1200,
     level: "Beginner",
     featured: true,
-    image: fluter,
+    image: htmlandcss,
   },
   {
     id: 2,
@@ -26,20 +85,21 @@ const courseSeedData = [
     students: 1500,
     level: "Beginner",
     featured: false,
-    image: "/images/js.png",
+    image: javascript,
   },
   {
     id: 3,
     category: "Web Development",
     title: "React Crash Course",
-    description: "Create modern web interfaces using React, hooks, and components.",
+    description:
+      "Create modern web interfaces using React, hooks, and components.",
     instructor: "Clara Smith",
     duration: "6 weeks",
     rating: 4.8,
     students: 980,
     level: "Intermediate",
     featured: true,
-    image: "/images/react.jpg",
+    image: react,
   },
   {
     id: 4,
@@ -52,33 +112,35 @@ const courseSeedData = [
     students: 830,
     level: "Intermediate",
     featured: false,
-    image: "/images/node.jpg",
+    image: node,
   },
   {
     id: 5,
     category: "Web Development",
     title: "Next.js Full Stack Guide",
-    description: "Develop server-rendered applications using Next.js and MongoDB.",
+    description:
+      "Develop server-rendered applications using Next.js and MongoDB.",
     instructor: "Eleanor Green",
     duration: "8 weeks",
     rating: 4.9,
     students: 512,
     level: "Advanced",
     featured: true,
-    image: "/images/nextjs.jpg",
+    image: next,
   },
   {
     id: 6,
     category: "Web Development",
     title: "Tailwind CSS Design System",
-    description: "Create stunning designs with Tailwind and component patterns.",
+    description:
+      "Create stunning designs with Tailwind and component patterns.",
     instructor: "Grace Lee",
     duration: "4 weeks",
     rating: 4.5,
     students: 612,
     level: "Beginner",
     featured: true,
-    image: "/images/tailwind.jpg",
+    image: tailwind,
   },
   {
     id: 7,
@@ -91,33 +153,35 @@ const courseSeedData = [
     students: 700,
     level: "Advanced",
     featured: false,
-    image: "/images/react-advanced.jpg",
+    image: react2,
   },
   {
     id: 8,
     category: "Web Development",
     title: "Web Accessibility Essentials",
-    description: "Make websites accessible to everyone following WCAG guidelines.",
+    description:
+      "Make websites accessible to everyone following WCAG guidelines.",
     instructor: "Isabella Lopez",
     duration: "3 weeks",
     rating: 4.5,
     students: 300,
     level: "All Levels",
     featured: false,
-    image: "/images/accessibility.jpg",
+    image: accessibility,
   },
   {
     id: 9,
     category: "Web Development",
     title: "Testing React Apps",
-    description: "Use Jest and React Testing Library to test components effectively.",
+    description:
+      "Use Jest and React Testing Library to test components effectively.",
     instructor: "Jake Wilson",
     duration: "4 weeks",
     rating: 4.7,
     students: 295,
     level: "Intermediate",
     featured: false,
-    image: "/images/testing.jpg",
+    image: testing,
   },
   {
     id: 10,
@@ -130,7 +194,7 @@ const courseSeedData = [
     students: 1900,
     level: "All Levels",
     featured: true,
-    image: "/images/webdev.jpg",
+    image: fullstack,
   },
 
   // === Mobile Development (11–20) ===
@@ -145,20 +209,21 @@ const courseSeedData = [
     students: 820,
     level: "Beginner",
     featured: true,
-    image: "/images/reactnative.jpg",
+    image: reactnative,
   },
   {
     id: 12,
     category: "Mobile Development",
     title: "Flutter for Beginners",
-    description: "Create cross-platform mobile apps with Google's Flutter framework.",
+    description:
+      "Create cross-platform mobile apps with Google's Flutter framework.",
     instructor: "Maria Gomez",
     duration: "6 weeks",
     rating: 4.7,
     students: 760,
     level: "Beginner",
     featured: false,
-    image: "/images/flutter.jpg",
+    image: fluter,
   },
   {
     id: 13,
@@ -171,7 +236,7 @@ const courseSeedData = [
     students: 640,
     level: "Intermediate",
     featured: false,
-    image: "/images/kotlin.jpg",
+    image: kotlin,
   },
   {
     id: 14,
@@ -184,7 +249,7 @@ const courseSeedData = [
     students: 590,
     level: "Intermediate",
     featured: true,
-    image: "/images/swift.jpg",
+    image: swift,
   },
   {
     id: 15,
@@ -197,7 +262,7 @@ const courseSeedData = [
     students: 490,
     level: "Beginner",
     featured: false,
-    image: "/images/mobileux.jpg",
+    image: uiux,
   },
   {
     id: 16,
@@ -210,7 +275,7 @@ const courseSeedData = [
     students: 520,
     level: "Intermediate",
     featured: false,
-    image: "/images/firebase.jpg",
+    image: firebase,
   },
   {
     id: 17,
@@ -223,7 +288,7 @@ const courseSeedData = [
     students: 870,
     level: "Advanced",
     featured: true,
-    image: "/images/unity.jpg",
+    image: unity,
   },
   {
     id: 18,
@@ -236,20 +301,21 @@ const courseSeedData = [
     students: 310,
     level: "All Levels",
     featured: false,
-    image: "/images/aso.jpg",
+    image: aso,
   },
   {
     id: 19,
     category: "Mobile Development",
     title: "React Native Advanced Projects",
-    description: "Develop advanced features like push notifications and deep linking.",
+    description:
+      "Develop advanced features like push notifications and deep linking.",
     instructor: "Thomas King",
     duration: "6 weeks",
     rating: 4.8,
     students: 440,
     level: "Advanced",
     featured: false,
-    image: "/images/reactnative-advanced.jpg",
+    image: reactnativeadvanced,
   },
   {
     id: 20,
@@ -262,7 +328,7 @@ const courseSeedData = [
     students: 520,
     level: "All Levels",
     featured: true,
-    image: "/images/crossplatform.jpg",
+    image: crossplatform,
   },
 
   // === Design (21–30) ===
@@ -277,7 +343,7 @@ const courseSeedData = [
     students: 720,
     level: "Beginner",
     featured: true,
-    image: "/images/graphicdesign.jpg",
+    image: graphicdesign,
   },
   {
     id: 22,
@@ -290,7 +356,7 @@ const courseSeedData = [
     students: 890,
     level: "Intermediate",
     featured: true,
-    image: "/images/figma.jpg",
+    image: figma,
   },
   {
     id: 23,
@@ -303,20 +369,21 @@ const courseSeedData = [
     students: 430,
     level: "Intermediate",
     featured: false,
-    image: "/images/uxresearch.jpg",
+    image: uxresearch,
   },
   {
     id: 24,
     category: "Design",
     title: "Prototyping & Wireframing",
-    description: "Turn ideas into interactive prototypes using Figma and Adobe XD.",
+    description:
+      "Turn ideas into interactive prototypes using Figma and Adobe XD.",
     instructor: "Yara Brooks",
     duration: "4 weeks",
     rating: 4.6,
     students: 570,
     level: "Beginner",
     featured: false,
-    image: "/images/prototyping.jpg",
+    image: prototyping,
   },
   {
     id: 25,
@@ -329,7 +396,7 @@ const courseSeedData = [
     students: 380,
     level: "Advanced",
     featured: true,
-    image: "/images/designsystem.jpg",
+    image: designsystem,
   },
   {
     id: 26,
@@ -342,33 +409,35 @@ const courseSeedData = [
     students: 1000,
     level: "Intermediate",
     featured: true,
-    image: "/images/photoshop.jpg",
+    image: photoshop,
   },
   {
     id: 27,
     category: "Design",
     title: "Illustrator for Beginners",
-    description: "Create vector graphics and illustrations using Adobe Illustrator.",
+    description:
+      "Create vector graphics and illustrations using Adobe Illustrator.",
     instructor: "Brian Foster",
     duration: "4 weeks",
     rating: 4.6,
     students: 860,
     level: "Beginner",
     featured: false,
-    image: "/images/illustrator.jpg",
+    image: illustrator,
   },
   {
     id: 28,
     category: "Design",
     title: "Design Thinking Workshop",
-    description: "Understand creative problem-solving with design thinking methods.",
+    description:
+      "Understand creative problem-solving with design thinking methods.",
     instructor: "Clara James",
     duration: "3 weeks",
     rating: 4.5,
     students: 640,
     level: "All Levels",
     featured: false,
-    image: "/images/designthinking.jpg",
+    image: designthinking,
   },
   {
     id: 29,
@@ -381,7 +450,7 @@ const courseSeedData = [
     students: 580,
     level: "Advanced",
     featured: true,
-    image: "/images/branding.jpg",
+    image: branding,
   },
   {
     id: 30,
@@ -394,7 +463,7 @@ const courseSeedData = [
     students: 950,
     level: "Advanced",
     featured: true,
-    image: "/images/blender.jpg",
+    image: blender,
   },
 
   // === Programming (31–40) ===
@@ -409,7 +478,7 @@ const courseSeedData = [
     students: 820,
     level: "Beginner",
     featured: true,
-    image: "/images/cprogramming.jpg",
+    image: cprogramming,
   },
   {
     id: 32,
@@ -422,7 +491,7 @@ const courseSeedData = [
     students: 2100,
     level: "All Levels",
     featured: true,
-    image: "/images/python.jpg",
+    image: python,
   },
   {
     id: 33,
@@ -435,20 +504,21 @@ const courseSeedData = [
     students: 1250,
     level: "Beginner",
     featured: false,
-    image: "/images/java.jpg",
+    image: java,
   },
   {
     id: 34,
     category: "Programming",
     title: "C++ Programming Advanced",
-    description: "Learn advanced concepts like templates, pointers, and OOP in C++.",
+    description:
+      "Learn advanced concepts like templates, pointers, and OOP in C++.",
     instructor: "Ian Miller",
     duration: "8 weeks",
     rating: 4.6,
     students: 890,
     level: "Advanced",
     featured: false,
-    image: "/images/cpp.jpg",
+    image: cpp,
   },
   {
     id: 35,
@@ -461,7 +531,7 @@ const courseSeedData = [
     students: 610,
     level: "Intermediate",
     featured: true,
-    image: "/images/rust.jpg",
+    image: rust,
   },
   {
     id: 36,
@@ -474,7 +544,7 @@ const courseSeedData = [
     students: 480,
     level: "Intermediate",
     featured: false,
-    image: "/images/golang.jpg",
+    image: golang,
   },
   {
     id: 37,
@@ -487,20 +557,21 @@ const courseSeedData = [
     students: 1750,
     level: "Advanced",
     featured: true,
-    image: "/images/dsa.jpg",
+    image: dsa,
   },
   {
     id: 38,
     category: "Programming",
     title: "Programming Logic with Pseudocode",
-    description: "Learn how to design algorithms using flowcharts and pseudocode.",
+    description:
+      "Learn how to design algorithms using flowcharts and pseudocode.",
     instructor: "Mark Turner",
     duration: "4 weeks",
     rating: 4.4,
     students: 400,
     level: "Beginner",
     featured: false,
-    image: "/images/pseudocode.jpg",
+    image: pseudocode,
   },
   {
     id: 39,
@@ -513,7 +584,7 @@ const courseSeedData = [
     students: 530,
     level: "Intermediate",
     featured: false,
-    image: "/images/functionaljs.jpg",
+    image: functionaljs,
   },
   {
     id: 40,
@@ -526,7 +597,7 @@ const courseSeedData = [
     students: 950,
     level: "Intermediate",
     featured: true,
-    image: "/images/flask.jpg",
+    image: flask,
   },
 
   // === Business (41–50) ===
@@ -541,7 +612,7 @@ const courseSeedData = [
     students: 1300,
     level: "All Levels",
     featured: true,
-    image: "/images/entrepreneurship.jpg",
+    image: entrepreneurship,
   },
   {
     id: 42,
@@ -554,7 +625,7 @@ const courseSeedData = [
     students: 850,
     level: "Intermediate",
     featured: false,
-    image: "/images/digitalmarketing.jpg",
+    image: digitalmarketing,
   },
   {
     id: 43,
@@ -567,7 +638,7 @@ const courseSeedData = [
     students: 920,
     level: "All Levels",
     featured: true,
-    image: "/images/leadership.jpg",
+    image: leadership,
   },
   {
     id: 44,
@@ -580,20 +651,21 @@ const courseSeedData = [
     students: 680,
     level: "Beginner",
     featured: false,
-    image: "/images/accounting.jpg",
+    image: accounting,
   },
   {
     id: 45,
     category: "Business",
     title: "Project Management Professional (PMP)",
-    description: "Prepare for the PMP certification with project management essentials.",
+    description:
+      "Prepare for the PMP certification with project management essentials.",
     instructor: "Tina Gray",
     duration: "8 weeks",
     rating: 4.8,
     students: 740,
     level: "Advanced",
     featured: true,
-    image: "/images/pmp.jpg",
+    image: pmp,
   },
   {
     id: 46,
@@ -606,7 +678,7 @@ const courseSeedData = [
     students: 480,
     level: "All Levels",
     featured: false,
-    image: "/images/negotiation.jpg",
+    image: negotiation,
   },
   {
     id: 47,
@@ -619,20 +691,21 @@ const courseSeedData = [
     students: 560,
     level: "Intermediate",
     featured: false,
-    image: "/images/excel.jpg",
+    image: excel,
   },
   {
     id: 48,
     category: "Business",
     title: "Startup Funding and Investment",
-    description: "Understand venture capital, angel investing, and pitch decks.",
+    description:
+      "Understand venture capital, angel investing, and pitch decks.",
     instructor: "Wendy Adams",
     duration: "6 weeks",
     rating: 4.7,
     students: 370,
     level: "Advanced",
     featured: true,
-    image: "/images/startupfunding.jpg",
+    image: startupfunding,
   },
   {
     id: 49,
@@ -645,20 +718,21 @@ const courseSeedData = [
     students: 410,
     level: "All Levels",
     featured: false,
-    image: "/images/communication.jpg",
+    image: communication,
   },
   {
     id: 50,
     category: "Business",
     title: "E-commerce Business Bootcamp",
-    description: "Learn to build and scale online stores using Shopify and WooCommerce.",
+    description:
+      "Learn to build and scale online stores using Shopify and WooCommerce.",
     instructor: "Yasmin Parker",
     duration: "7 weeks",
     rating: 4.8,
     students: 1050,
     level: "Intermediate",
     featured: true,
-    image: "/images/ecommerce.jpg",
+    image: ecommerce,
   },
 
   // === Cybersecurity (51–60) ===
@@ -666,14 +740,15 @@ const courseSeedData = [
     id: 51,
     category: "Cybersecurity",
     title: "Cybersecurity Fundamentals",
-    description: "Learn the basics of information security and threat analysis.",
+    description:
+      "Learn the basics of information security and threat analysis.",
     instructor: "Zane Brooks",
     duration: "6 weeks",
     rating: 4.7,
     students: 620,
     level: "Beginner",
     featured: true,
-    image: "/images/cyberfundamentals.jpg",
+    image: cyberfundamentals,
   },
   {
     id: 52,
@@ -686,20 +761,21 @@ const courseSeedData = [
     students: 780,
     level: "Intermediate",
     featured: true,
-    image: "/images/ethicalhacking.jpg",
+    image: ethicalhacking,
   },
   {
     id: 53,
     category: "Cybersecurity",
     title: "Network Security Essentials",
-    description: "Understand firewalls, VPNs, and secure network architectures.",
+    description:
+      "Understand firewalls, VPNs, and secure network architectures.",
     instructor: "Brian Davis",
     duration: "5 weeks",
     rating: 4.6,
     students: 490,
     level: "Intermediate",
     featured: false,
-    image: "/images/networksecurity.jpg",
+    image: networksecurity,
   },
   {
     id: 54,
@@ -712,7 +788,7 @@ const courseSeedData = [
     students: 510,
     level: "Advanced",
     featured: false,
-    image: "/images/cloudsecurity.jpg",
+    image: cloudsecurity,
   },
   {
     id: 55,
@@ -725,20 +801,21 @@ const courseSeedData = [
     students: 380,
     level: "Advanced",
     featured: true,
-    image: "/images/forensics.jpg",
+    image: forensics,
   },
   {
     id: 56,
     category: "Cybersecurity",
     title: "Security Operations Center (SOC)",
-    description: "Monitor, detect, and respond to cyber threats in a SOC environment.",
+    description:
+      "Monitor, detect, and respond to cyber threats in a SOC environment.",
     instructor: "Ella Johnson",
     duration: "8 weeks",
     rating: 4.8,
     students: 460,
     level: "Advanced",
     featured: false,
-    image: "/images/soc.jpg",
+    image: soc,
   },
   {
     id: 57,
@@ -751,33 +828,35 @@ const courseSeedData = [
     students: 430,
     level: "Intermediate",
     featured: false,
-    image: "/images/crypto.jpg",
+    image: crypto,
   },
   {
     id: 58,
     category: "Cybersecurity",
     title: "Security Awareness Training",
-    description: "Teach employees how to identify phishing and social engineering.",
+    description:
+      "Teach employees how to identify phishing and social engineering.",
     instructor: "Gina Taylor",
     duration: "3 weeks",
     rating: 4.4,
     students: 270,
     level: "All Levels",
     featured: false,
-    image: "/images/awareness.jpg",
+    image: awareness,
   },
   {
     id: 59,
     category: "Cybersecurity",
     title: "Malware Analysis",
-    description: "Dissect and analyze malicious software using sandboxing tools.",
+    description:
+      "Dissect and analyze malicious software using sandboxing tools.",
     instructor: "Henry White",
     duration: "7 weeks",
     rating: 4.8,
     students: 510,
     level: "Advanced",
     featured: true,
-    image: "/images/malware.jpg",
+    image: malware,
   },
   {
     id: 60,
@@ -790,9 +869,8 @@ const courseSeedData = [
     students: 1800,
     level: "All Levels",
     featured: true,
-    image: "/images/mlintro.jpg",
+    image: mlintro,
   },
   // you can continue ML 61–70 if you want more later
 ];
-
 export default courseSeedData;
