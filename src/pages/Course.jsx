@@ -1,9 +1,10 @@
 // src/pages/Course.jsx
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { BookOpen, PlayCircle, Search, X, Home, ChevronLeft, Zap } from "lucide-react";
+import { BookOpen, PlayCircle, Search, X, Home, ChevronLeft } from "lucide-react";
 import seedData from "../seed/seedData";
 import seedDataLive from "../seed/seedDataLive";
+import { loadCourses } from "../seed/storage"; // ✅ import loadCourses
 import OnlineCourses from "../components/OnlineCourses";
 import LiveCourses from "../components/LiveCourses";
 
@@ -21,8 +22,12 @@ const Course = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        setCourses(seedData);
-        setFeaturedCourses(seedData.slice(0, 4));
+        // Load saved courses from localStorage
+        const storedCourses = loadCourses();
+        // Combine seed data and stored courses
+        const allCourses = [...seedData, ...storedCourses];
+        setCourses(allCourses);
+        setFeaturedCourses(allCourses.slice(0, 4));
         setLiveClasses(seedDataLive);
       } catch (err) {
         console.error(err);
@@ -36,7 +41,7 @@ const Course = () => {
   const filteredCourses = courses.filter(
     (course) =>
       course.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      course.instructor.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      (course.instructor && course.instructor.toLowerCase().includes(searchTerm.toLowerCase())) ||
       course.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -54,14 +59,13 @@ const Course = () => {
     setSearchAnimation(true);
     setTimeout(() => setSearchAnimation(false), 500);
   };
-  
 
   const clearSearch = () => setSearchTerm("");
 
   return (
     <div className="min-h-screen bg-gradient-to-blue from-blue-50 via-white to-blue-100 py-6">
       {/* Back Button for mobile */}
-      <div className=" sticky top-16 z-40 bg-white/80 backdrop-blur-sm border-b border-blue-100 mb-4">
+      <div className="sticky top-16 z-40 bg-white/80 backdrop-blur-sm border-b border-blue-100 mb-4">
         <div className="container mx-auto px-4 py-3">
           <Link
             to="/"
@@ -77,7 +81,7 @@ const Course = () => {
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-2xl md:text-3xl font-bold text-[#004F70] mb-2">All course</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-[#004F70] mb-2">All Courses</h1>
           <p className="text-gray-600 text-sm">
             Discover {courses.length} online courses and {liveClasses.length} live classes
           </p>
@@ -137,9 +141,17 @@ const Course = () => {
 
         {/* Content */}
         {activeTab === "courses" ? (
-          <OnlineCourses courses={filteredCourses.length ? filteredCourses : courses} handleCourseClick={handleCourseClick} searchAnimation={searchAnimation} />
+          <OnlineCourses
+            courses={filteredCourses.length ? filteredCourses : courses}
+            handleCourseClick={handleCourseClick}
+            searchAnimation={searchAnimation}
+          />
         ) : (
-          <LiveCourses liveClasses={liveClasses} handleCourseClick={handleCourseClick} handleRegisterNow={handleRegisterNow} />
+          <LiveCourses
+            liveClasses={liveClasses}
+            handleCourseClick={handleCourseClick}
+            handleRegisterNow={handleRegisterNow}
+          />
         )}
       </div>
     </div>

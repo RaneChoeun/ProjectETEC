@@ -13,6 +13,7 @@ import {
   HelpCircle,
   X,
   Menu,
+  BarChart
 } from "lucide-react";
 import Logo from "./Logo";
 
@@ -169,6 +170,17 @@ const Nav = ({
                       >
                         <HelpCircle className="w-5 h-5 mr-3 text-[#004F70]" />
                         Help & Support
+                      </button>
+                      {/*Dashboard*/}
+                      <button
+                        onClick={() => {
+                          navigate("/dashboard");
+                          setDropdownOpen(false);
+                        }}
+                        className="flex items-center w-full px-4 py-3 text-gray-700 hover:bg-gray-50 transition-all"
+                      >
+                        <BarChart className="w-5 h-5 mr-3 text-[#004F70]" />
+                        Dashboard
                       </button>
                       {/* Logout */}
                       <button

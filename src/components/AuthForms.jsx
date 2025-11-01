@@ -89,21 +89,25 @@ const AuthForms = ({ isOpen, onClose, onLoginSuccess }) => {
     let userData;
 
     if (isLogin) {
+      const isAdmin = formData.email === "admin@elearning.com";
       // Mock login - in real app, you'd call your API
-      userData = {
-        fullName: "Demo User",
+        userData = {
+        fullName: isAdmin ? "Admin" : "Demo User",
         email: formData.email,
+        role: isAdmin ? "admin" : "user",
         phone: "+855123456789",
         birthDate: "1995-05-15",
         gender: "Female",
         profilePicture: "",
         joined: new Date().toISOString(),
       };
+
     } else {
       // Mock signup - use actual form data
       userData = {
         fullName: formData.fullName || "New User",
         email: formData.email,
+        role: "user", // Sign up always user
         phone: formData.phone || "+855000000000",
         birthDate: formData.birthDate || "2000-01-01",
         gender: formData.gender || "Prefer not to say",
@@ -114,7 +118,8 @@ const AuthForms = ({ isOpen, onClose, onLoginSuccess }) => {
 
     // Save user data to localStorage for export
     saveUserDataToStorage(userData);
-
+    // Save role
+    localStorage.setItem("userRole", userData.role);
     onLoginSuccess(userData);
     onClose();
   };

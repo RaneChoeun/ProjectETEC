@@ -19,7 +19,7 @@ import Settings from "./pages/Settings";
 import AllCourseDetail from "./pages/AllCourseDetail";
 import { LanguageContext } from "./components/LanguageContext";
 import { translations } from "./components/Translatation";
-
+import Dashboard from "./pages/Dashboard";
 // Component to handle footer visibility
 const FooterHandler = ({ onAboutUs, onTermsConditions, onSettings }) => {
   const location = useLocation();
@@ -160,6 +160,7 @@ function App() {
             <Route path="/terms-conditions"element={<TermsConditions onBack={handleBackToHome} />}/>
             <Route path="/features" element={<Features onBack={handleBackToHome} />}/>
             <Route path="/settings" element={<Settings onBack={handleBackToHome} />}/>
+            <Route path="/dashboard" element={<Dashboard />} onBack={handleBackToHome} />
             <Route
               path="/profile"
               element={
