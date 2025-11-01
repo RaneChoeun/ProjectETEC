@@ -154,21 +154,21 @@ function App() {
                 />
               }
             />
+            <Route path="/about-us" element={<AboutUs onBack={handleBackToHome} />}/>
+            <Route path="/about-us" element={<AboutUs onBack={handleBackToHome} />}/>
+            <Route path="/help-support" element={<AboutUs onBack={handleBackToHome} />}/>
+            <Route path="/terms-conditions"element={<TermsConditions onBack={handleBackToHome} />}/>
+            <Route path="/features" element={<Features onBack={handleBackToHome} />}/>
+            <Route path="/settings" element={<Settings onBack={handleBackToHome} />}/>
             <Route
-              path="/about"
-              element={<AboutUs onBack={handleBackToHome} />}
-            />
-            <Route
-              path="/terms"
-              element={<TermsConditions onBack={handleBackToHome} />}
-            />
-            <Route
-              path="/features"
-              element={<Features onBack={handleBackToHome} />}
-            />
-            <Route
-              path="/settings"
-              element={<Settings onBack={handleBackToHome} />}
+              path="/profile"
+              element={
+                <ProfileForm
+                   userData={userData}
+                   onClose={() => setShowProfile(false)}
+                   onUpdateProfile={handleUpdateProfile}
+                />
+                }
             />
           </Routes>
         </main>

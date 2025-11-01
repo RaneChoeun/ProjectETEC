@@ -1,10 +1,15 @@
+import ReactImg from "./images/react.png";
+import ReactNativeAdvanced from "./images/reactnativeadvanced.png";
+import PythonImg from "./images/python.png";
+import HtmlCssImg from "./images/htmlandcss.png";
+import fluter from "./images/fluter.jpg";
+
 const seedDataLive = [
   {
     id: 101,
     title: "Web Development Live Bootcamp",
     instructor: "Sarah Johnson",
     time: "Live Now",
-    students: 45,
     duration: "2 hours",
     price: "$49.99",
     originalPrice: "$99.99",
@@ -19,13 +24,13 @@ const seedDataLive = [
     enrolled: 45,
     subjects: ["Live Coding", "Project Building", "Q&A Session", "Code Review"],
     benefits: ["Real-time feedback", "Interactive learning", "Networking", "Certificate"],
+    image: ReactImg,
   },
   {
     id: 102,
     title: "React Masterclass Workshop",
     instructor: "Mike Chen",
     time: "Starts in 30 min",
-    students: 28,
     duration: "1.5 hours",
     price: "$29.99",
     color: "from-blue-500 to-cyan-600",
@@ -38,13 +43,13 @@ const seedDataLive = [
     enrolled: 28,
     subjects: ["React Hooks", "State Management", "Performance", "Best Practices"],
     benefits: ["Expert guidance", "Code along", "Resources", "Support"],
+    image: ReactNativeAdvanced,
   },
   {
     id: 103,
     title: "Python for Data Science",
     instructor: "Emily Davis",
     time: "Starts in 1 hour",
-    students: 32,
     duration: "2 hours",
     price: "Free",
     color: "from-green-500 to-emerald-600",
@@ -57,13 +62,13 @@ const seedDataLive = [
     enrolled: 32,
     subjects: ["Python Basics", "Pandas", "Data Visualization", "Projects"],
     benefits: ["Free access", "Beginner friendly", "Hands-on", "Certificate"],
+    image: PythonImg,
   },
   {
     id: 104,
     title: "UI/UX Design Live Session",
     instructor: "Alex Rodriguez",
     time: "Tomorrow, 2:00 PM",
-    students: 18,
     duration: "3 hours",
     price: "$79.99",
     originalPrice: "$129.99",
@@ -77,24 +82,26 @@ const seedDataLive = [
     enrolled: 18,
     subjects: ["Design Principles", "Figma Tutorial", "User Research", "Prototyping"],
     benefits: ["Design feedback", "Portfolio project", "Resources", "Mentorship"],
+    image: HtmlCssImg,
   },
   {
     id: 105,
     title: "Mobile App Development",
     instructor: "Dr. James Wilson",
     time: "Live Now",
-    students: 22,
     duration: "2.5 hours",
     price: "$59.99",
     color: "from-orange-500 to-red-600",
     status: "live",
-    description: "Build cross-platform mobile apps with React Native in this intensive session.",
+    description:
+      "Build cross-platform mobile apps with React Native in this intensive session.",
     category: "mobile development",
     level: "Intermediate",
     maxStudents: 35,
     enrolled: 22,
     subjects: ["React Native", "Mobile UI", "APIs", "Deployment"],
     benefits: ["Live coding", "App building", "Q&A", "Resources"],
+    image: fluter// ✅ Changed here
   },
 ];
 
